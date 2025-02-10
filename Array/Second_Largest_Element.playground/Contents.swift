@@ -2,22 +2,24 @@
 
 /*
  
-Explanation:
+MARK: - Question : Second Largest Element in an Array
+
+ Input : let numbersArr = [12, 38, 15, 10, 45, 18, 38, 6, 7, 9]
+ Expected Output : 38
+
+===================
  
-Method 1 (Sorting): The array is sorted in descending order, and the function returns the second unique element that is not equal to the largest.
+MARK: - Answer Explanation:
  
-Method 2 (Set): The array is converted to a set to remove duplicates, sorted in descending order, and the second element is returned.
+ Method 1 (Sorting): The array is sorted in descending order, and the function returns the second unique element that is not equal to the largest.
  
+ Method 2 (Set): The array is converted to a set to remove duplicates, sorted in descending order, and the second element is returned.
+
 */
 
 import Foundation
 
-/*
-Example Usage
-Expected Output : 38
-Input :
-*/
-
+// Input variable declaration
 let numbersArr = [12, 38, 15, 10, 45, 18, 38, 6, 7, 9]
 
 // MARK: - Method 1: Using Sorting
@@ -38,7 +40,7 @@ func findSecondLargestUsingSorting(in array: [Int]) -> Int? {
     return nil // All elements are the same
 }
 
-// Example Usage Method 1
+// Usage of Method 1
 if let secondLargestNumber = findSecondLargestUsingSorting(in: numbersArr) {
     print("Output (Using Sorting): \(secondLargestNumber)") // Output: 38
 } else {
@@ -61,9 +63,9 @@ func findSecondLargestUsingSet(in array: [Int]) -> Int? {
     return uniqueNumbers[1]
 }
 
-// Example Usage Method 2
+// Usage of Method 2
 if let secondLargestNumber = findSecondLargestUsingSet(in: numbersArr) {
-    print("Output (Using Set): \(secondLargestNumber)") // Output: 7
+    print("Output (Using Set): \(secondLargestNumber)") // Output: 38
 } else {
     print("Output (Using Set): No second largest element")
 }
